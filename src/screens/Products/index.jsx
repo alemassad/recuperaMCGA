@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {getProducts} from '../../store/products/thunks';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
      const productsSelector = useSelector((state) => state.products);
@@ -79,6 +80,7 @@ const Products = () => {
                     }
                     )}
                 </tbody>
+                <Link  className='btn-add' to={"/add"}><button className='btn-add'>Agregar Producto</button></Link>
             </table>      
         
         </div>

@@ -1,4 +1,13 @@
-import { GET_PRODUCTS_FULLFILLED, GET_PRODUCTS_LOADING, DELETE_PRODUCTS_REJECTED,  DELETE_PRODUCTS_FULLFILLED } from './types';
+import {GET_PRODUCTS_FULLFILLED,
+        GET_PRODUCTS_LOADING,
+        GET_PRODUCTS_REJECTED, 
+
+        SAVE_PRODUCTS_FULLFILLED,
+        SAVE_PRODUCTS_LOADING,
+        SAVE_PRODUCTS_REJECTED
+
+
+       } from './types';
 
  const INITIAL_STATE = {
    data: [],
@@ -8,31 +17,45 @@ import { GET_PRODUCTS_FULLFILLED, GET_PRODUCTS_LOADING, DELETE_PRODUCTS_REJECTED
 
  const productsReducer = (state = INITIAL_STATE, action) => {
    switch (action.type) {
+    //obtener Productos
      case GET_PRODUCTS_FULLFILLED:
        return {
          ...state,
          data: action.payload,
          isError: false,
        };
-
       case GET_PRODUCTS_LOADING:
         return {
           ...state,
           isLoading: action.payload,
         }
-
-      case DELETE_PRODUCTS_REJECTED: 
+      case GET_PRODUCTS_REJECTED: 
         return {
           ...state,
           isError: true,
           isLoading: false
         }
+     
+       //agregar products
+       case SAVE_PRODUCTS_FULLFILLED:
+        return{
+            ...state,
+            data: action.payload,
+            isError: false,
+        };
 
-     case DELETE_PRODUCTS_FULLFILLED:
-       return {
-         ...state,
-         data: state.data.filter((item) => item.id !== action.payload),
-       };
+    case SAVE_PRODUCTS_LOADING:
+        return{
+            ...state,
+            isLoading: action.payload,
+        };
+
+    case SAVE_PRODUCTS_REJECTED:
+        return{
+            ...state,
+            isError: true,
+            isLoading: false,
+        };
 
      default:
        return state;
