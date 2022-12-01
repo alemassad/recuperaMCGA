@@ -7,7 +7,7 @@ const Layout = ({children}) => {
     <div>
       <header className={styles.header}>
         <button className={styles.btnhome}>
-          <Link to={'/'}>Ir al Home</Link>
+          <Link to={'/'}>Home</Link>
         </button>
         <h1 className={styles.title}>Recuperatorio 2 parcial MCGA</h1>
         <Link to={'/products'}><button>Ir al CRUD</button></Link>

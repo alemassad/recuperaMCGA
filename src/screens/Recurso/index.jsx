@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {getProducts,deleteProductsThunk} from '../../store/products/thunks';
 import { Link } from 'react-router-dom';
+import styles from "./productRecurso.module.css";
 
 const Products = () => {
      const productsSelector = useSelector((state) => state.products);
@@ -70,8 +71,8 @@ const Products = () => {
                             ></input>
                             </td>                    
                               
-                            <td><Link to={`/edit/${product._id}`}><button className='{styles.editar}'>Editar</button></Link></td>
-                            <td><button onClick={() => handleClick(product._id)} className='{styles.delete}'>Eliminar</button></td>
+                            <td><Link to={`/edit/${product._id}`}><button className={styles.editar}>Editar</button></Link></td>
+                            <td><button onClick={() => handleClick(product._id)} className={styles.delete}>Eliminar</button></td>
                         </tr>                                       
                         );
                     }

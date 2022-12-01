@@ -5,22 +5,25 @@
     justify-content:space-around ;
     width: 100%;
     background-color: rgb(120, 7, 250);
+    color: rgb(187, 168, 171);
+    padding: 10px;
 }
-
-.title {
-    
+.title {    
     font-size: 3rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .content {
     background-color: rgb(156, 240, 229);
     height: 80vh;
 }
-.footer {
-    background-color: rgb(35, 3, 71);
-    height: 10vh;
+
+button {   
+    width: 70px;
+    height: 35px;
+    background-color: rgb(250, 155, 45);    
+    border-radius: 5px;
+    text-decoration: none;
 }
-.tbnhome {
-    background-color: red;    
+button::shadow {
+    background-color: rgb(45, 250, 106);
 }
