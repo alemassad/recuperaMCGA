@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# RECUPERATORIO DEL SEGUNDO PARCIAL MCGA 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto ABM desarrollada con React utilizando create-react-app.
 
-## Available Scripts
+## DESCRIPCIÓN:
 
-In the project directory, you can run:
+●Cuenta con una lista de recursos siguiendo la lógica de un ABM.
+● se utilozó la librería (React-hook-form) para el manejo de formularios. 
+● Cuenta con un layout, que contiene:
+    ○ Header
+    ○ NavBar (barra de navegación)
+    ○ Body o contenido
+    ○ Footer
+                                        
+● La app contiene 4 pantallas:
+    1 WELCOME o HOME: Donde se describe una breve introduccion a
+        la aplicación. Con el que podemos probar el ruteo de la aplicación.
+    2 Recurso: en esta pantalla deberán mostrar la lista de recursos con la lógica
+    del AMB.
+● Comprendido por componentes.. tanto para el Header, Body y Footer, como también un
+componente para la lista del recurso. A su vez, estos componentes deben utilizan
+componentes compartidos, como los botones, inputs. Estos componentes están vinculados a sus respectivos archivos .css, utilizando CSS modules.
+● La APP cuenta con formularios para realizar un POST, un DELETE o un
+UPDATE de un nuevo recurso a la lista.
+● Cada formulario aseguran validaciones correspondientes para evitar
+agregar nuevos recursos con datos erróneos o sin datos.
+● Se permite realizar las diferentes request (GET, POST, PUT, DELETE) desde
+el ABM de cada recurso.
+● Cuenta con: un archivo donde se haga la configuración inicial del store de Redux.
+ un reducer por cada recurso y un rootReducer.
+ un archivo de actions por cada recurso.
+ un archivo de types (constantes) para las actions.
+ con actions creators utilizando la librería Redux Thunk, los cuales
+son necesarios para realizar la conexión del FE con el BE.
 
-### `npm start`
+### Modos de uso
+Al cargar la Aplicación, el sistema ingresa a la página inicial o HOME, desde el cual se puede acceder a las demás páginas para la manipulación de los datos de los productos.
+Luego desde la pagina del CRUD el usuario puede acceder y modificar o borrar los datos de los productos cargada en la base de datos, mediante el uso de los botones de comando.
+Tambíen puede ingresar al repositorio Github donde se aloja el código fuente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Datos del alumno:
+Luis Alejandro Massad.
+De la materia Modelos Computacionales  de Gestión Administrativa.
+Del turno mañana y ciclo lectivo 2022 UAI.
