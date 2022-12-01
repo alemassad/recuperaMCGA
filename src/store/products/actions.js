@@ -10,10 +10,6 @@ import { SAVE_PRODUCTS_FULLFILLED,
         GET_PRODUCTS_LOADING,
         GET_PRODUCTS_REJECTED,
 
-        POST_PRODUCTS_LOADING,
-        POST_PRODUCTS_FULLFILLED,
-        POST_PRODUCTS_REJECTED,
-
         EDIT_PRODUCTS_LOADING,
         EDIT_PRODUCTS_FULLFILLED,
         EDIT_PRODUCTS_REJECTED      
@@ -32,9 +28,10 @@ export const saveProductsLoading  = (isLoading) => {
     payload: isLoading,
   };
 };
-export const saveProductsRejected = () => {
+export const saveProductsRejected = (error) => {
   return {
     type: SAVE_PRODUCTS_REJECTED,
+    payload: error
   };
 };
 
@@ -45,9 +42,10 @@ export const deleteProductsFullfilled = (id) => {
         payload: id
     };
   }
-export const deleteProductsLoading = () => {
+export const deleteProductsLoading = (isLoading) => {
   return {
-    type: DELETE_PRODUCTS_LOADING
+    type: DELETE_PRODUCTS_LOADING,
+    payload: isLoading,
   };
 }; 
 export const deleteProductsRejected = (error) => {
@@ -58,19 +56,18 @@ export const deleteProductsRejected = (error) => {
 };
 
 //Obtener data
-export const getProductsLoading = () => {
+export const getProductsLoading = (isLoading) => {
   return {
-    type: GET_PRODUCTS_LOADING
+    type: GET_PRODUCTS_LOADING,
+    payload: isLoading,
   };
 };
-
 export const getProductsFullfilled = (data) => {
   return {
     type: GET_PRODUCTS_FULLFILLED,
     payload: data
   };
 };
-
 export const getProductsRejected = (error) => {
   return {
     type: GET_PRODUCTS_REJECTED,
@@ -78,28 +75,11 @@ export const getProductsRejected = (error) => {
   };
 };
 
-// Post data
-export const postProductsLoading = () => {
-  return {
-    type: POST_PRODUCTS_LOADING
-  };
-};
-export const postProductsFullfilled = (data) => {
-  return {
-    type: POST_PRODUCTS_FULLFILLED,
-    payload: data
-  };
-};
-export const postProductsRejected = (error) => {
-  return {
-    type: POST_PRODUCTS_REJECTED,
-    payload: error
-  };
-};
 //Editar data
-export const editProductsLoading = () => {
+export const editProductsLoading = (isLoading) => {
   return {
-    type: EDIT_PRODUCTS_LOADING
+    type: EDIT_PRODUCTS_LOADING,
+    payload: isLoading
   };
 };
 export const editProductsFullfilled = (data) => {
@@ -108,9 +88,8 @@ export const editProductsFullfilled = (data) => {
     payload: data
   };
 };
-export const editProductsRejected = (error) => {
+export const editProductsRejected = () => {
   return {
-    type: EDIT_PRODUCTS_REJECTED,
-    payload: error
+    type: EDIT_PRODUCTS_REJECTED    
   };
 };

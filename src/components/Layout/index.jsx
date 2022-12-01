@@ -10,9 +10,10 @@ const Layout = ({children}) => {
           <Link to={'/'}>Ir al Home</Link>
         </button>
         <h1 className={styles.title}>Recuperatorio 2 parcial MCGA</h1>
+        <Link to={'/products'}><button>Ir al CRUD</button></Link>
         <button>
           <a 
-          href="https://github.com/alemassad" 
+          href="https://github.com/alemassad/recuperaMCGA" 
           target={'_blank'} 
           rel="noreferrer">
               GitHub Repo

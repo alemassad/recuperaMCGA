@@ -20,13 +20,12 @@ export default function CreateProduct() {
 
   if(stateProducts.isLoading){
     return(
-        <h2 className={styles.loading}>Loading...</h2>
+        <h2 className={styles.loading}>Cargando...</h2>
     )
   }
   if(submited && stateProducts.data){
-    navigate("/Recursos");
-  }
-  //console.log(errors);
+    navigate("/");
+  }  
 
   return (
     <div className={styles.conteiner}>
@@ -38,7 +37,7 @@ export default function CreateProduct() {
         {errors.name && <span className={styles.error}>Ingrese un nombre válido</span>}
 
         <label>Description</label>
-        <textarea cols="10" rows="10" type={"textarea"} {...register("description",{maxLength: 100})}></textarea>
+        <textarea cols="5" rows="3" type={"textarea"} {...register("description",{maxLength: 100})}></textarea>
         {errors.description && <span className={styles.error}>Ingrese una descripcion válida</span>}
 
         <label>Price</label>
@@ -49,9 +48,7 @@ export default function CreateProduct() {
         <input type={"number"} {...register("stock",{ required:true, min: 0})}/>
         {errors.stock && <span className={styles.error}>Ingresar un número válido</span>}
 
-        <label>Category</label>      
-    
-
+        <label>Category</label>
         <select {...register("category")}>
           <option value="computers">Computadora</option>
           <option value="phones">Celulares</option>

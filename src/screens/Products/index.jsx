@@ -1,19 +1,19 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import {getProducts} from '../../store/products/thunks';
+import {getProducts,deleteProductsThunk} from '../../store/products/thunks';
 import { Link } from 'react-router-dom';
 
 const Products = () => {
      const productsSelector = useSelector((state) => state.products);
      const dispatch = useDispatch();
 
-    console.log('data',productsSelector.data);
-    console.log('loading',productsSelector.isLoading);
-    console.log('error',productsSelector.isError);     
-
      useEffect(() => {
         dispatch(getProducts());
-     }, []);
+     }, [dispatch]);
+
+     function handleClick(id){
+        dispatch(deleteProductsThunk(id));
+      }
 
      if (productsSelector.isLoading) return <h3>Cargando...enlace..</h3>
 
@@ -68,13 +68,10 @@ const Products = () => {
                                 placeholder={product.category}
                                 
                             ></input>
-                            </td>
-                        
-                            <button                            
-                            >Update Product</button>
-
-                            <button                          
-                            >Delete Product</button>
+                            </td>                    
+                              
+                            <td><Link to={`/edit/${product._id}`}><button className='{styles.editar}'>Editar</button></Link></td>
+                            <td><button onClick={() => handleClick(product._id)} className='{styles.delete}'>Eliminar</button></td>
                         </tr>                                       
                         );
                     }
