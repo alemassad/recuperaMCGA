@@ -35,7 +35,7 @@ export default function EditProduct() {
 
   if(productsSelector.isLoading){
     return(
-        <h2 className={styles.loading}>Loading...</h2>
+        <h2 className={styles.loading}>Cargando...</h2>
     )
   }  
 
@@ -46,22 +46,22 @@ export default function EditProduct() {
   return (
     <div className={styles.conteiner}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h2>Modificar Producto</h2>
+        <h2>Actualizar</h2>
         <label>Nombre</label>
         <input type={"text"} {...register("name",{required: true, maxLength:20})}/>
-        {errors.name && <span className={styles.error}>Este campo no puede quedar vacío o tener un máximo de 20 caracteres</span>}
+        {errors.name && <span className={styles.error}>Ingrese un nombre válido</span>}
 
         <label>Descripcion</label>
-        <textarea cols="30" rows="10" type={"textarea"} {...register("description",{maxLength: 100})}></textarea>
-        {errors.description && <span className={styles.error}>No puede superar los 100 caracteres</span>}
+        <textarea cols="10" rows="3" type={"textarea"} {...register("description",{maxLength: 100})}></textarea>
+        {errors.description && <span className={styles.error}>Ingrese una descripcion válida</span>}
 
         <label>Precio</label>
         <input type={"number"} {...register("price",{required:true, min: 0})}/>
-        {errors.price && <span className={styles.error}>El precio no puede ser un valor negativo o estar vacío</span>}
+        {errors.price && <span className={styles.error}>Ingrese un precio válido</span>}
 
         <label>Stock</label>
         <input type={"number"} {...register("stock",{required:true, min: 0})}/>
-        {errors.stock && <span className={styles.error}>El stock no puede ser un valor negativo o estar vacío</span>}
+        {errors.stock && <span className={styles.error}>Ingrese un numero válido</span>}
 
         <label>Categoria</label>
         <select {...register("category")}>
@@ -70,7 +70,7 @@ export default function EditProduct() {
           <option value="accesories">Accesorios</option>
         </select>
 
-        <button className={styles.buttonagregarproduct} type="submit">Modificar</button>
+        <button className={styles.btnActualizar} type="submit">Actualizar</button>
       </form>
     </div>
   )

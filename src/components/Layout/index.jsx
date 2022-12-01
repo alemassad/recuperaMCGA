@@ -1,30 +1,15 @@
 import React from 'react';
 import styles from './layout.module.css';
-import { Link } from 'react-router-dom';
-
+import Footer from '../Footer/index';
+import Header from '../Header/index';
 const Layout = ({children}) => {
   return (
     <div>
-      <header className={styles.header}>
-        <button className={styles.btnhome}>
-          <Link to={'/'}>Home</Link>
-        </button>
-        <h1 className={styles.title}>Recuperatorio 2 parcial MCGA</h1>
-        <Link to={'/products'}><button>Ir al CRUD</button></Link>
-        <button>
-          <a 
-          href="https://github.com/alemassad/recuperaMCGA" 
-          target={'_blank'} 
-          rel="noreferrer">
-              GitHub Repo
-          </a>
-        </button>
-        
-      </header>
+      <Header />            
       <div className={styles.content}>
-      {children}
-      
+      {children}      
       </div>
+      <Footer/>
     </div>
   );
 }

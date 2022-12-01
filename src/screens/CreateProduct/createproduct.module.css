@@ -10,28 +10,27 @@
     align-items: center;
     justify-content: center;
     min-height: 70vh;
-    width: 80%;
+    width: 60%;
+    height: 90%;
 }
 
 form{
     background-color: rgb(85, 85, 235);
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 5px;
     border-radius: 10px;
-    opacity: 0.6;
+    opacity: 0.7;
     width: 40%;
     align-items: center;
-    margin: 20px 0;
+    margin: 100px 10px 10px 10px;
 }
-
 label{
     font-size: 16px;
     color: white;
     margin: 10px;
     font-weight: 600;
 }
-
 h2{
     color: white;
     margin-bottom: 20px;
@@ -40,22 +39,22 @@ h2{
 
 input, textarea{
     padding: 6px;
-    width: 90%;
+    width: 80%;
     border: none;
     background-color: rgb(196, 193, 193);
     opacity: 0.9;
     color: black;
     border-radius: 6px;
     outline: none;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     resize: none;
 }
 
 select{
     width: 90%;
     padding: 4px;
-    background-color: rgb(196, 193, 193);
-    color: rgb(145, 139, 139);
+    background-color: rgb(240, 173, 173);
+    color: rgb(75, 68, 68);
     border: none;
     opacity: 0.9;
     font-size: 15px;
@@ -66,24 +65,23 @@ select{
     cursor: pointer;
 }
 
-.buttonagregarproduct{
-    margin-top: 30px;
-    padding: 10px;
-    width: 90%;
-    font-size: 15px;
+.btnAdd{
+    margin-top: 10px;
+    width: 80%;
+    font-size: 20px;
     font-weight: 600;
     color: white;
-    background-color: rgb(60, 160, 81);
+    background-color: rgb(83, 236, 116);
     border: none;
     border-radius: 6px;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 select:hover, input:hover, textarea:hover{
     background-color: rgb(214, 212, 212);
 }
 
-.buttonagregarproduct:hover{
+.btnAdd:hover{
     background-color: rgb(216, 106, 106);
 }
 
@@ -92,5 +90,5 @@ select:hover, input:hover, textarea:hover{
     font-weight: 100;
     width: 80%;
     font-size: 12px;
-    color: white;
+    color: rgb(248, 19, 19);
 }

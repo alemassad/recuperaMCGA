@@ -34,46 +34,42 @@ const Products = () => {
                     {productsSelector.data.map((product) => {
                         return (
                             
-                        <tr key={product.id}>
-                            <td> 
-                            <input //input name
-                                type="text" 
-                                placeholder={product.name}
-                               
-                            ></input>
-                            </td>
-                            <td>
-                            <input //input description
-                                type="text" 
-                                placeholder={product.description}
-                               
-                            ></input>
-                            </td> 
-                            <td>
-                            <input //input price
-                                type="text" 
-                                placeholder={product.price}
-                               
-                            ></input>
-                            </td>  
-                            <td>
-                            <input //input stock
-                                type="text" 
-                                placeholder={product.stock}
-                               
-                            ></input>
-                            </td>  
-                            <td>
-                            <input //input category
-                                type="text" 
-                                placeholder={product.category}
+                            <tr key={product.id}>
+                                <td> 
+                                <input //input name
+                                    type="text" 
+                                    placeholder={product.name}                               
+                                ></input>
+                                </td>
+                                <td>
+                                <input //input description
+                                    type="text" 
+                                    placeholder={product.description}                               
+                                ></input>
+                                </td> 
+                                <td>
+                                <input //input price
+                                    type="text" 
+                                    placeholder={product.price}                               
+                                ></input>
+                                </td>  
+                                <td>
+                                <input //input stock
+                                    type="text" 
+                                    placeholder={product.stock}                               
+                                ></input>
+                                </td>  
+                                <td>
+                                <input //input category
+                                    type="text" 
+                                    placeholder={product.category}                                
+                                ></input>
+                                </td>                   
                                 
-                            ></input>
-                            </td>                    
-                              
-                            <td><Link to={`/edit/${product._id}`}><button className={styles.editar}>Editar</button></Link></td>
-                            <td><button onClick={() => handleClick(product._id)} className={styles.delete}>Eliminar</button></td>
-                        </tr>                                       
+                                <td><Link to={`/edit/${product._id}`}><button className={styles.editar}>Editar</button></Link></td>
+
+                                <td><button onClick={() => handleClick(product._id)} className={styles.delete}>Eliminar</button></td>
+                            </tr>                                       
                         );
                     }
                     )}

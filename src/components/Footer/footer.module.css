@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3727ca;
+  
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  width: 80%;
+  height: 100px;
+}
+
+.app {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFF;
+  padding: 10px;
+}

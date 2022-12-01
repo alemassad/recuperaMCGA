@@ -55,7 +55,7 @@ export default function CreateProduct() {
           <option value="accesories">Accesorios</option>          
         </select>
 
-        <button className={styles.buttonagregarproduct} type="submit">Crear</button>
+        <button className={styles.btnAdd} type="submit">Crear</button>
       </form>
     </div>
   )
